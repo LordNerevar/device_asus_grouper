@@ -49,4 +49,3 @@
 # ************************************************
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/root/default.prop)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/build.prop)
-$(call add-clean-step, rm -rf $(TARGET_OUT)/etc/permissions/android.hardware.bluetooth_le.xml)
