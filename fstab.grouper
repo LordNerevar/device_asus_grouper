@@ -4,7 +4,9 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-/dev/block/platform/sdhci-tegra.3/by-name/APP     /system       ext4     ro                                                       wait
+# Try f2fs first, then ext4
+/dev/block/platform/sdhci-tegra.3/by-name/APP     /system       f2fs     ro,discard,noatime,nodiratime,inline_xattr               wait
+/dev/block/platform/sdhci-tegra.3/by-name/APP     /system       ext4     ro,noatime,errors=panic                                  wait
 
 # Try f2fs first, then ext4
 /dev/block/platform/sdhci-tegra.3/by-name/CAC     /cache        f2fs     rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr  wait,check
