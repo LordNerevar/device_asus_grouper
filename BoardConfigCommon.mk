@@ -45,7 +45,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/asus/grouper
-TARGET_KERNEL_CONFIG := slim_grouper_defconfig
+TARGET_KERNEL_CONFIG := grouper_defconfig
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
