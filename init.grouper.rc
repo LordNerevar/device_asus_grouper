@@ -25,7 +25,7 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
     symlink /mnt/usbdisk /usbdisk
 
-    EXPORT SECONDARY_STORAGE /storage/usbdisk
+    export SECONDARY_STORAGE /storage/usbdisk
 
 on early-boot
     restorecon /sys/devices/system/cpu
@@ -380,11 +380,10 @@ service bugreport /system/bin/dumpstate -d -p -B \
     keycodes 115 114
 
 # Start GPS daemon
-  on boot
-  service gps-daemon /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
-  user gps
-  group system
-  class late_start
+service gps-daemon /system/bin/glgps -c /system/etc/gps/gpsconfig.xml
+    class late_start
+    user gps
+    group system
 
 # Recovery daemon: configure MSC partition
 service recoveryd /system/bin/recoveryd /dev/block/platform/sdhci-tegra.3/by-name/MSC
