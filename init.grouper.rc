@@ -272,7 +272,6 @@ on boot
     chown gps system /dev/ttyHS1
     chmod 0660 /dev/ttyHS1
 
-
 # Load WiFi driver
 
 # BB mapping symbolic name to the logging ttyACM port
@@ -330,7 +329,7 @@ service dhcpcd_eth0 /system/bin/dhcpcd -ABDKL -f/system/etc/dhcpcd/dhcpcd.conf
     disabled
     oneshot
 
-service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
+service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
     class main
     disabled
     oneshot
@@ -356,7 +355,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 
 #Sensor: load calibration files.
-    service sensors-config /system/bin/sensors-config
+service sensors-config /system/bin/sensors-config
     class main
     user root
     oneshot
