@@ -32,3 +32,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/grouper/overlay
+
+# Net
+PRODUCT_PACKAGES += \
+    libnetcmdiface
+
+# Audio
+PRODUCT_PACKAGES += \
+    libdashplayer
