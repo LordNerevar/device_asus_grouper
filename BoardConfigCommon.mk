@@ -108,3 +108,9 @@ BOARD_SEPOLICY_UNION += \
         system.te \
         zygote.te
 
+#TWRP
+DEVICE_RESOLUTION := 800x1280
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_USB_STORAGE := false
+TW_INCLUDE_JB_CRYPTO := true
