@@ -126,3 +126,11 @@ PRODUCT_COPY_FILES += \
 
 WIFI_BAND := 802_11_BG
  $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
+
+# Net
+PRODUCT_PACKAGES += \
+    libnetcmdiface
+
+# Audio
+PRODUCT_PACKAGES += \
+    libdashplayer
