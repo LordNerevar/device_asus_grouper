@@ -5,15 +5,15 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 # Try f2fs first, then ext4
-/dev/block/platform/sdhci-tegra.3/by-name/APP     /system       f2fs     ro,discard,noatime,nodiratime,inline_xattr               wait
+/dev/block/platform/sdhci-tegra.3/by-name/APP     /system       f2fs     ro,noatime,nodiratime,inline_xattr               wait
 /dev/block/platform/sdhci-tegra.3/by-name/APP     /system       ext4     ro,noatime,errors=panic                                  wait
 
 # Try f2fs first, then ext4
-/dev/block/platform/sdhci-tegra.3/by-name/CAC     /cache        f2fs     rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr  wait,check
+/dev/block/platform/sdhci-tegra.3/by-name/CAC     /cache        f2fs     rw,nosuid,nodev,noatime,nodiratime,inline_xattr  wait,check
 /dev/block/platform/sdhci-tegra.3/by-name/CAC     /cache        ext4     noatime,nosuid,nodev,nomblk_io_submit,errors=panic       wait
 
 # Try f2fs first, then ext4
-/dev/block/platform/sdhci-tegra.3/by-name/UDA     /data         f2fs     rw,discard,nosuid,nodev,noatime,nodiratime,inline_xattr  wait,check,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
+/dev/block/platform/sdhci-tegra.3/by-name/UDA     /data         f2fs     rw,nosuid,nodev,noatime,nodiratime,inline_xattr  wait,check,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
 /dev/block/platform/sdhci-tegra.3/by-name/UDA     /data         ext4     noatime,nosuid,nodev,nomblk_io_submit,errors=panic       wait,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
 
 /dev/block/platform/sdhci-tegra.3/by-name/MSC     /misc         emmc     defaults                                                 defaults
