@@ -33,7 +33,6 @@ include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 PRODUCT_COPY_FILES += \
     device/asus/grouper/ueventd.grouper.rc:root/ueventd.grouper.rc \
     device/asus/grouper/init.grouper.usb.rc:root/init.grouper.usb.rc \
-    device/asus/grouper/gps.conf:system/etc/gps.conf \
     device/asus/grouper/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
 ifneq ($(TARGET_PREBUILT_WIFI_MODULE),)
@@ -108,6 +107,12 @@ PRODUCT_COPY_FILES += \
 # audio policy configuration
 PRODUCT_COPY_FILES += \
     device/asus/grouper/audio_policy.conf:system/etc/audio_policy.conf
+
+# GPS
+PRODUCT_COPY_FILES += \
+    device/asus/grouper/gps/gps.conf:system/etc/gps.conf \
+    device/asus/grouper/gps/AGPS_CA.pem:system/etc/AGPS_CA.pem \
+    device/asus/grouper/gps/gpsconfig.xml:system/etc/gps/gpsconfig.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
