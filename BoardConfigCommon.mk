@@ -116,3 +116,6 @@ BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_NO_USB_STORAGE := false
 TW_INCLUDE_JB_CRYPTO := true
+
+# Dump State
+BOARD_HAL_STATIC_LIBRARIES := libdumpstate.grouper
