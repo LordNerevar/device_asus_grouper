@@ -21,3 +21,8 @@ persist.tegra.didim.video = 5
 # secure ADB
 persist.sys.usb.config=mtp,adb
 ro.adb.secure=1
+
+# Google recommended hwui settings for 1280x800 display
+ro.hwui.texture_cache_size = 20
+ro.hwui.texture_cache_flushrate = 0.5
+ro.hwui.gradient_cache_size = 0.1
