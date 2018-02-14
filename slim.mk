@@ -22,4 +22,4 @@ PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
 
 #Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT="google/nakasi/grouper:4.4.2/KOT49H/937116:user/release-keys" PRIVATE_BUILD_DESC="nakasi-user 4.4.2 KOT49H 937116 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT="google/nakasi/grouper:4.4.4/KTU84P/1227136:user/release-keys" PRIVATE_BUILD_DESC="nakasi-user 4.4.4 KTU84P 1227136 release-keys"
