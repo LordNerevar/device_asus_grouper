@@ -119,3 +119,5 @@ TW_INCLUDE_JB_CRYPTO := true
 
 # Dump State
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.grouper
+
+BOARD_SKIP_CVE_2017_13154 := true
