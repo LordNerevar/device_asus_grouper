@@ -79,7 +79,8 @@ PRODUCT_PACKAGES := \
     l2ping \
     hcitool \
     bttest \
-    com.android.future.usb.accessory
+    com.android.future.usb.accessory \
+    ntfs-3g
 
 PRODUCT_PACKAGES += \
     keystore.grouper
@@ -142,6 +143,3 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     libdashplayer
-
-# Google Applications
-include vendor/google/apps/PicoPackages.mk
